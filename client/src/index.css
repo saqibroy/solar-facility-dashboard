@@ -1,9 +1,0 @@
-/* Global CSS to remove focus outlines only after mouse clicks */
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Preserve outlines for keyboard navigation */
-:focus-visible {
-  outline: auto;
-}

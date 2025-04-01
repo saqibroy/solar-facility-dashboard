@@ -7,3 +7,17 @@
 :focus-visible {
   outline: auto;
 }
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  z-index: 100;
+  background: white;
+  color: blue;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
