@@ -1,0 +1,26 @@
+# === Common Ignored Files ===
+node_modules/
+.DS_Store
+.env
+.env.local
+*.log
+dist/
+build/
+.idea/
+.vscode/
+*.tmp
+*.bak
+
+# === Server-Specific (Node.js/Express) ===
+server/.env
+server/node_modules/
+server/logs/
+server/uploads/
+
+# === Client-Specific (React/Vite/Next.js) ===
+client/.env
+client/node_modules/
+client/dist/
+client/build/
+client/.next/
+client/.cache/

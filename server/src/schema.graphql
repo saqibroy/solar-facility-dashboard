@@ -1,0 +1,43 @@
+type Facility {
+  id: ID!
+  name: String!
+  nominalPower: Int!
+}
+
+type PerformanceData {
+  id: ID!
+  timestamp: String!
+  activePower: Float!
+  energy: Float!
+  facilityId: ID!
+}
+
+type User {
+  id: ID!
+  username: String!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type Query {
+  facilities: [Facility!]!
+
+  performanceData(facilityId: ID!): [PerformanceData!]!
+
+  me: User
+}
+
+type Mutation {
+  createFacility(name: String!, nominalPower: Int!): Facility!
+
+  updateFacility(id: ID!, name: String, nominalPower: Int): Facility!
+
+  deleteFacility(id: ID!): Boolean!
+
+  signUp(username: String!, password: String!): AuthPayload!
+
+  signIn(username: String!, password: String!): AuthPayload!
+}
