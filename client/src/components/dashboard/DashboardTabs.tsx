@@ -1,7 +1,7 @@
 import { Tabs, Tab, Paper } from '@mui/material'
 import { Home as HomeIcon, BarChart as ChartIcon } from '@mui/icons-material'
 import { TabValue } from '../../types'
-import { useFacilityActions } from '../../stores/facility'
+import { useFacilityActions, useSelectedFacilityId } from '../../stores/facility'
 
 interface DashboardTabsProps {
   currentTab: TabValue
@@ -10,6 +10,7 @@ interface DashboardTabsProps {
 
 export const DashboardTabs = ({ currentTab, isMobile }: DashboardTabsProps) => {
   const { setCurrentTab } = useFacilityActions()
+  const selectedFacilityId = useSelectedFacilityId()
   return (
     <Paper sx={{ mb: 3 }}>
       <Tabs
@@ -29,6 +30,7 @@ export const DashboardTabs = ({ currentTab, isMobile }: DashboardTabsProps) => {
           label='Performance Data'
           iconPosition='start'
           value={TabValue.PERFORMANCE}
+          disabled={!selectedFacilityId}
         />
       </Tabs>
     </Paper>

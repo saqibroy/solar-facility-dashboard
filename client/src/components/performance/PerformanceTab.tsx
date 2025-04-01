@@ -36,8 +36,8 @@ export const PerformanceTab = () => {
 
     const formData = new FormData()
     formData.append('file', file)
-
-    fetch(`http://localhost:4000/upload-performance-data/${selectedFacilityId}`, {
+    const apiuri = import.meta.env.VITE_GRAPHQL_URL
+    fetch(`${apiuri.replace(/graphql$/, 'upload-performance-data/')}${selectedFacilityId}`, {
       method: 'POST',
       body: formData,
       headers: {
