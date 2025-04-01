@@ -39,7 +39,7 @@ solar-facility-dashboard/
 
 ### Prerequisites
 
-- Node.js (v16+)
+- Node.js (v20.9.0)
 - MongoDB database
 
 ### Installation
@@ -53,8 +53,8 @@ cd solar-facility-dashboard
 npm run install-all
 
 # Create .env files
-In server directory, create a .env file with MONGODB_URI and JWT_SECRET (see server/README.md for details)
-In client directory, create a .env file with your GraphQL endpoint in VITE_GRAPHQL_URL (see client/README.md for details)
+# In server directory, create a .env file with MONGODB_URI and JWT_SECRET (see server/README.md for details)
+# In client directory, create a .env file with your GraphQL endpoint in VITE_GRAPHQL_URL (see client/README.md for details)
 
 # Start both client and server
 npm run dev
